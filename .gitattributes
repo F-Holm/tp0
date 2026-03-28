@@ -1,0 +1,15 @@
+* text eol=lf
+
+# Text
+*.sh     text
+*.json   text
+*.c      text
+*.h      text
+.git*    text
+*.md     text
+*.yml    text
+Makefile text
+*.mk     text
+*.config text
+
+# Binary
