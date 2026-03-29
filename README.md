@@ -8,6 +8,5 @@ Es un ejercicio corto y sirve como base para empezar el TP cuatrimestral.
 
 ## Consigna
 
-Podés encontrar la consigna en el siguiente [link].
+Podés encontrar la consigna en el siguiente [archivo](consigna.pdf).
 
-[link]: https://faq.utnso.com.ar/tp0-enunciado
