@@ -20,6 +20,10 @@ int main(void)
 	// Escribi: "Hola! Soy un log"
 	log_info(logger, "Hola! Soy un log");
 
+	if (config == NULL){
+		log_error(logger, "¡No se pudo crear el logger!");
+		abort();
+	}
 
 	/* ---------------- ARCHIVOS DE CONFIGURACION ---------------- */
 
