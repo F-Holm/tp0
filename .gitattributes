@@ -13,3 +13,4 @@ Makefile text
 *.config text
 
 # Binary
+*.pdf    binary
