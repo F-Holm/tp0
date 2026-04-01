@@ -69,9 +69,6 @@ int main(void)
 
 	/*---------------------------------------------------PARTE 5-------------------------------------------------------------*/
 	// Proximamente
-
-	log_destroy(logger);
-	config_destroy(config);
 }
 
 t_log* iniciar_logger(void)
@@ -92,9 +89,17 @@ void leer_consola(t_log* logger)
 	leido = readline("> ");
 
 	// El resto, las vamos leyendo y logueando hasta recibir un string vacío
+	while (leido != NULL && strcmp(leido, "") != 0 )
+	{
+		log_info(logger, "text: %s", );
 
+		free(leido);
+
+		leido = readline("> ");
+	}
 
 	// ¡No te olvides de liberar las lineas antes de regresar!
+	free(leido);
 
 }
 
@@ -115,4 +120,6 @@ void terminar_programa(int conexion, t_log* logger, t_config* config)
 {
 	/* Y por ultimo, hay que liberar lo que utilizamos (conexion, log y config) 
 	  con las funciones de las commons y del TP mencionadas en el enunciado */
+	log_destroy(logger);
+	config_destroy(config);
 }
