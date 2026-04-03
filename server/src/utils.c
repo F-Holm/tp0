@@ -92,8 +92,9 @@ t_list* recibir_paquete(int socket_cliente)
 	{
 		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
 		desplazamiento+=sizeof(int);
-		char* valor = malloc(tamanio);
+		char* valor = malloc(tamanio + 1);
 		memcpy(valor, buffer+desplazamiento, tamanio);
+		valor[tamanio] = 0x00;
 		desplazamiento+=tamanio;
 		list_add(valores, valor);
 	}
