@@ -50,7 +50,7 @@ int main(void)
 	log_info(logger, "Valor: %s - ip: %s - puerto: %s", valor, ip, puerto);
 
 	/* ---------------- LEER DE CONSOLA ---------------- */
-
+	log_info(logger, "Leyendo consola:");
 	leer_consola(logger);
 
 	/*---------------------------------------------------PARTE 3-------------------------------------------------------------*/
@@ -64,6 +64,7 @@ int main(void)
 	enviar_mensaje(valor, conexion);
 
 	// Armamos y enviamos el paquete
+	log_info(logger, "Armando paquete:");
 	paquete(conexion);
 
 	terminar_programa(conexion, logger, config);
@@ -92,7 +93,7 @@ void leer_consola(t_log* logger)
 	// El resto, las vamos leyendo y logueando hasta recibir un string vacío
 	while (leido != NULL && strcmp(leido, "") != 0 )
 	{
-		log_info(logger, "text: %s", leido);
+		log_info(logger, "%s", leido);
 
 		free(leido);
 
